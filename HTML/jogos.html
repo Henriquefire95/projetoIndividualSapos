@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jogos — Sonic 35</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="paginas.css">
+  <script>try{if(!localStorage.getItem("sonic35_logado"))location.replace("login.html?restrito=1")}catch(e){location.replace("login.html?restrito=1")}</script>
+</head>
+<body data-pagina="jogos">
+  <header class="cab-comunidade">
+    <a class="marca-c" href="index.html" aria-label="Sonic 35 anos — início">
+      <svg class="anel-azul" width="34" height="34" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="13" fill="none" stroke="#0755f5" stroke-width="3"/></svg>
+      <span class="nome">SONIC</span>
+      <span class="anos">35 ANOS</span>
+    </a>
+    <nav class="nav-c" aria-label="Principal">
+      <a href="index.html">Início</a>
+      <a href="personagens.html">Personagens</a>
+      <a href="mapas.html">Mapas</a>
+      <a href="jogos.html" class="ativo" aria-current="page">Jogos</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+    <div class="usuario">
+      <p class="usuario-nome" data-usuario>Olá, Player 01</p>
+      <p class="usuario-acoes"><a href="#minha-conta">Minha conta</a>  ·  <a href="index.html" data-sair>Sair</a></p>
+    </div>
+  </header>
+
+  <section class="faixa">
+    <p class="eyebrow-amarelo">UNIVERSO SONIC  /  JOGOS</p>
+    <h1 class="menor">Dê o play na sua próxima aventura.</h1>
+    <p class="apoio">Clássicos em 2D, histórias em 3D e novos horizontes. Qual é o seu favorito?</p>
+  </section>
+
+  <main>
+    <p class="rotulo-secao">TRÊS ERAS. A MESMA VELOCIDADE.</p>
+
+    <div class="grade-jogos">
+    <article class="jogo">
+      <div class="jogo-arte mania">
+        <img src="assets/jogo-sonic-mania.png" alt="Arte de Sonic Mania" onerror="this.style.display='none'">
+      </div>
+      <p class="tag">2017  /  PLATAFORMA 2D</p>
+      <h3>Sonic Mania</h3>
+      <p class="descricao">Uma celebração dos clássicos em pixel art, com fases remixadas e novas zonas para Sonic, Tails e Knuckles.</p>
+      <p class="genero">NOSTALGIA EM CADA PIXEL</p>
+    </article>
+    <article class="jogo">
+      <div class="jogo-arte adventure">
+        <img src="assets/jogo-sonic-adventure-2.png" alt="Arte de Sonic Adventure 2" onerror="this.style.display='none'">
+      </div>
+      <p class="tag">2001  /  AÇÃO E AVENTURA</p>
+      <h3>Sonic Adventure 2</h3>
+      <p class="descricao">Heróis e rivais em uma aventura com Sonic e Shadow. Corridas, caça às esmeraldas e batalhas memoráveis.</p>
+      <p class="genero">DOIS LADOS DA MESMA HISTÓRIA</p>
+    </article>
+    <article class="jogo">
+      <div class="jogo-arte frontiers">
+        <img src="assets/jogo-sonic-frontiers.png" alt="Arte de Sonic Frontiers" onerror="this.style.display='none'">
+      </div>
+      <p class="tag">2022  /  ZONAS ABERTAS</p>
+      <h3>Sonic Frontiers</h3>
+      <p class="descricao">Explore as Starfall Islands em alta velocidade, resolva mistérios e enfrente ameaças gigantescas.</p>
+      <p class="genero">UMA NOVA FRONTEIRA</p>
+    </article>
+    </div>
+
+    <section class="mais-aventuras" aria-labelledby="mais-titulo">
+      <h2 id="mais-titulo">Mais aventuras para descobrir</h2>
+      <ul>
+        <li><span class="nome">Sonic Generations</span><span class="ano">2011</span><span class="resumo">Sonic clássico e moderno em uma só aventura.</span></li>
+        <li><span class="nome">Sonic Colors</span><span class="ano">2010</span><span class="resumo">Velocidade e os poderes coloridos dos Wisps.</span></li>
+        <li><span class="nome">Sonic Forces</span><span class="ano">2017</span><span class="resumo">A resistência contra o império de Eggman.</span></li>
+      </ul>
+    </section>
+
+    <a class="convite-dash" href="dashboard.html">
+      <h2>O que a comunidade está jogando?</h2>
+      <p>Confira o ranking e as preferências no dashboard.</p>
+      <span class="ir">Ver dashboard →</span>
+    </a>
+  </main>
+
+  <footer class="rodape-c">
+    <p class="assinatura">SONIC 35&nbsp; /&nbsp; Sempre existe uma próxima fase.</p>
+    <p class="nota">Artes ilustrativas. Projeto de fã, não oficial. © SEGA.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
