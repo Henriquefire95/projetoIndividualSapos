@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personagens — Sonic 35</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/estilo.css">
+  <link rel="stylesheet" href="../css/dashboards.css">
+  <script src="../js/sessao.js"></script>
+</head>
+<body onload="validarSessao()">
+  <header class="cab-comunidade">
+    <a class="marca-c" href="../index.html" aria-label="Sonic 35 anos — início">
+      <svg class="anel-azul" width="34" height="34" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="13" fill="none" stroke="#0755f5" stroke-width="3"/></svg>
+      <span class="nome">SONIC</span>
+      <span class="anos">35 ANOS</span>
+    </a>
+    <nav class="nav-c" aria-label="Principal">
+      <a href="../index.html">Início</a>
+      <a href="personagens.html" class="ativo" aria-current="page">Personagens</a>
+      <a href="mapas.html">Mapas</a>
+      <a href="jogos.html">Jogos</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+    <div class="usuario">
+      <p class="usuario-nome">Olá, <span id="b_usuario">Player 01</span></p>
+      <p class="usuario-acoes"><a href="#minha-conta">Minha conta</a>  ·  <a href="#" onclick="limparSessao(); return false;">Sair</a></p>
+    </div>
+  </header>
+
+  <section class="faixa">
+    <p class="eyebrow-amarelo">UNIVERSO SONIC  /  PERSONAGENS</p>
+    <h1>Velhos amigos. Rivais lendários.</h1>
+    <p class="apoio">Conheça as personalidades que dão vida a 35 anos de aventuras.</p>
+  </section>
+
+  <main class="principal">
+    <div class="busca-filtro">
+      <div class="busca">
+        <label class="sr-only" for="busca">Buscar personagem pelo nome</label>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="busca" type="search" placeholder="Buscar personagem pelo nome" autocomplete="off">
+      </div>
+
+      <div class="filtro" id="filtro">
+        <button class="filtro-botao" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="filtro-menu">Todos os personagens  ↓</button>
+        <ul class="filtro-menu" id="filtro-menu" role="listbox" aria-label="Filtrar por personagem" hidden>
+          <li role="option" tabindex="0" data-valor="todos" aria-selected="true">Todos os personagens</li>
+          <li role="option" tabindex="0" data-valor="heroi" aria-selected="false">Heróis</li>
+          <li role="option" tabindex="0" data-valor="rival" aria-selected="false">Rivais e vilões</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="elenco-topo">
+      <p class="titulo">ELENCO PRINCIPAL</p>
+      <p class="contagem" id="contagem" aria-live="polite">6 personagens  •  Heróis e vilões</p>
+    </div>
+
+    <div class="grade-personagens" id="grade">
+      <article class="personagem" data-categoria="heroi" data-nome="Sonic the Hedgehog">
+        <div class="retrato" data-inicial="S">
+          <img src="../assets/imgs/personagem-sonic.png" alt="Imagem de Sonic the Hedgehog" onerror="this.style.display='none'">
+        </div>
+        <p class="tag">O HERÓI MAIS VELOZ</p>
+        <h3>Sonic the Hedgehog</h3>
+        <p class="estreia">1991 · Sonic the Hedgehog</p>
+        <p class="descricao">Livre, corajoso e apaixonado por aventura. Sonic usa sua supervelocidade para proteger os amigos e impedir os planos do Dr. Eggman.</p>
+        <p class="habilidade">VELOCIDADE</p>
+      </article>
+      <article class="personagem" data-categoria="heroi" data-nome="Miles “Tails” Prower">
+        <div class="retrato" data-inicial="T">
+          <img src="../assets/imgs/personagem-tails.png" alt="Imagem de Miles “Tails” Prower" onerror="this.style.display='none'">
+        </div>
+        <p class="tag">UM GÊNIO DE DUAS CAUDAS</p>
+        <h3>Miles “Tails” Prower</h3>
+        <p class="estreia">1992 · Sonic the Hedgehog 2</p>
+        <p class="descricao">Melhor amigo de Sonic e inventor brilhante. Tails gira suas duas caudas para voar e ajuda o time com máquinas e soluções engenhosas.</p>
+        <p class="habilidade">VOO E TECNOLOGIA</p>
+      </article>
+      <article class="personagem" data-categoria="heroi" data-nome="Knuckles the Echidna">
+        <div class="retrato" data-inicial="K">
+          <img src="../assets/imgs/personagem-knuckles.png" alt="Imagem de Knuckles the Echidna" onerror="this.style.display='none'">
+        </div>
+        <p class="tag">O GUARDIÃO DA MASTER EMERALD</p>
+        <h3>Knuckles the Echidna</h3>
+        <p class="estreia">1994 · Sonic the Hedgehog 3</p>
+        <p class="descricao">Forte, determinado e leal ao seu dever. Knuckles protege a Master Emerald em Angel Island e pode planar e escalar paredes.</p>
+        <p class="habilidade">FORÇA</p>
+      </article>
+      <article class="personagem" data-categoria="heroi" data-nome="Amy Rose">
+        <div class="retrato" data-inicial="A">
+          <img src="../assets/imgs/personagem-amy.png" alt="Imagem de Amy Rose" onerror="this.style.display='none'">
+        </div>
+        <p class="tag">CORAGEM DE SOBRA</p>
+        <h3>Amy Rose</h3>
+        <p class="estreia">1993 · Sonic CD</p>
+        <p class="descricao">Otimista e decidida, Amy encara qualquer desafio com seu martelo Piko Piko. Sua empatia e determinação mantêm os amigos unidos.</p>
+        <p class="habilidade">MARTELO PIKO PIKO</p>
+      </article>
+      <article class="personagem" data-categoria="rival" data-nome="Shadow the Hedgehog">
+        <div class="retrato" data-inicial="S">
+          <img src="../assets/imgs/personagem-shadow.png" alt="Imagem de Shadow the Hedgehog" onerror="this.style.display='none'">
+        </div>
+        <p class="tag">O RIVAL DEFINITIVO</p>
+        <h3>Shadow the Hedgehog</h3>
+        <p class="estreia">2001 · Sonic Adventure 2</p>
+        <p class="descricao">Criado como a forma de vida suprema, Shadow segue seu próprio caminho. Seu poder Chaos Control permite manipular espaço e tempo.</p>
+        <p class="habilidade">CHAOS CONTROL</p>
+      </article>
+      <article class="personagem" data-categoria="rival" data-nome="Dr. Eggman">
+        <div class="retrato" data-inicial="E">
+          <img src="../assets/imgs/personagem-eggman.png" alt="Imagem de Dr. Eggman" onerror="this.style.display='none'">
+        </div>
+        <p class="tag">UM GÊNIO COM GRANDES PLANOS</p>
+        <h3>Dr. Eggman</h3>
+        <p class="estreia">1991 · Sonic the Hedgehog</p>
+        <p class="descricao">O cientista que sonha em dominar o mundo com seu império de robôs. Inteligência e máquinas extravagantes fazem dele o grande rival de Sonic.</p>
+        <p class="habilidade">ROBÓTICA</p>
+      </article>
+      <p class="vazio" id="vazio" hidden>Nenhum personagem encontrado. Tente outro nome.</p>
+    </div>
+  </main>
+
+  <footer class="rodape-c">
+    <p class="assinatura">SONIC 35&nbsp; /&nbsp; Conheça cada lenda.</p>
+    <p class="nota">Projeto de fã, não oficial. Personagens © SEGA.</p>
+  </footer>
+
+  <script>
+      const grade = document.getElementById('grade');
+      if (grade) {
+        const busca = document.getElementById('busca');
+        const filtro = document.getElementById('filtro');
+        const botaoFiltro = filtro.querySelector('.filtro-botao');
+        const menu = document.getElementById('filtro-menu');
+        const opcoes = [...menu.querySelectorAll('li')];
+        const cartoes = [...grade.querySelectorAll('.personagem')];
+        const vazio = document.getElementById('vazio');
+        const contagem = document.getElementById('contagem');
+        let categoria = 'todos';
+  
+        const normalizar = (texto) => texto.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  
+        function aplicar() {
+          const termo = normalizar(busca.value.trim());
+          let visiveis = 0;
+          cartoes.forEach((cartao) => {
+            const combina = (categoria === 'todos' || cartao.dataset.categoria === categoria)
+              && normalizar(cartao.dataset.nome).includes(termo);
+            cartao.hidden = !combina;
+            if (combina) visiveis += 1;
+          });
+          vazio.hidden = visiveis > 0;
+          contagem.textContent = `${visiveis} ${visiveis === 1 ? 'personagem' : 'personagens'}  •  Heróis e vilões`;
+        }
+  
+        function abrirMenu(abrir) {
+          menu.hidden = !abrir;
+          botaoFiltro.setAttribute('aria-expanded', String(abrir));
+          if (abrir) (opcoes.find((o) => o.getAttribute('aria-selected') === 'true') || opcoes[0]).focus();
+        }
+  
+        function escolher(opcao) {
+          categoria = opcao.dataset.valor;
+          opcoes.forEach((o) => o.setAttribute('aria-selected', String(o === opcao)));
+          botaoFiltro.textContent = `${opcao.textContent}  ↓`;
+          abrirMenu(false);
+          botaoFiltro.focus();
+          aplicar();
+        }
+  
+        botaoFiltro.addEventListener('click', () => abrirMenu(menu.hidden));
+        opcoes.forEach((opcao) => {
+          opcao.addEventListener('click', () => escolher(opcao));
+          opcao.addEventListener('keydown', (e) => {
+            const i = opcoes.indexOf(opcao);
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); escolher(opcao); }
+            if (e.key === 'ArrowDown') { e.preventDefault(); opcoes[(i + 1) % opcoes.length].focus(); }
+            if (e.key === 'ArrowUp') { e.preventDefault(); opcoes[(i - 1 + opcoes.length) % opcoes.length].focus(); }
+          });
+        });
+  
+        document.addEventListener('click', (e) => { if (!filtro.contains(e.target)) abrirMenu(false); });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && !menu.hidden) { abrirMenu(false); botaoFiltro.focus(); }
+        });
+  
+        busca.addEventListener('input', aplicar);
+      }
+  </script>
+</body>
+</html>

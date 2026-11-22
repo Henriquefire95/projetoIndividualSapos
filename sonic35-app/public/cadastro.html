@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Criar conta — Sonic 35</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/sessao.js"></script>
+</head>
+<body class="pagina-auth">
+  <header class="cab-auth">
+    <a class="marca-a" href="index.html" aria-label="Sonic 35 anos — início">
+      <svg class="anel-azul" width="32" height="32" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="13" fill="none" stroke="#0755f5" stroke-width="3"/></svg>
+      <span class="nome">SONIC</span>
+      <span class="anos">35 ANOS</span>
+    </a>
+    <nav class="nav-a" aria-label="Principal">
+      <a href="index.html">Início</a>
+      <a href="dashboard/personagens.html">O universo Sonic</a>
+    </nav>
+    <div class="acesso">
+      <a class="botao botao-claro" style="width:106px" href="login.html">Entrar</a>
+      <a class="botao botao-azul" style="width:160px" href="cadastro.html" aria-current="page">Criar conta</a>
+    </div>
+  </header>
+
+  <main class="auth">
+    <section class="celebracao" aria-label="Celebração dos 35 anos">
+      <p class="eyebrow-amarelo">1991 — 2026  /  SONIC 35</p>
+      <h2>SUA PRÓXIMA<br>AVENTURA.</h2>
+      <div class="arte">
+        <img src="assets/imgs/sonic-e-os-aneis.png" alt="Sonic correndo cercado por anéis dourados" onerror="this.style.display='none'">
+      </div>
+      <p class="legenda-c">35 anos conectando gerações de jogadores.</p>
+    </section>
+
+    <section class="form-area">
+      <form class="formulario cadastro" id="form_cadastro" onsubmit="return cadastrar()" novalidate>
+        <p class="form-eyebrow">PLAYER 01 • NOVA JORNADA</p>
+        <h1 class="form-titulo">Entre para o time.</h1>
+        <p class="form-sub">Crie sua conta e explore o universo Sonic.</p>
+
+        <div class="campo">
+          <label for="nome_input">Nome</label>
+          <div class="entrada">
+            <input id="nome_input" name="nome" type="text" autocomplete="name" placeholder="Como podemos chamar você?" required>
+          </div>
+          <p class="erro" id="erro_nome_input" role="alert" hidden></p>
+        </div>
+
+        <div class="campo">
+          <label for="email_input">E-mail</label>
+          <div class="entrada">
+            <input id="email_input" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required>
+          </div>
+          <p class="erro" id="erro_email_input" role="alert" hidden></p>
+        </div>
+
+        <div class="campo">
+          <label for="senha_input">Senha</label>
+          <div class="entrada com-olho">
+            <input id="senha_input" name="senha" type="password" autocomplete="new-password" placeholder="Crie uma senha" required minlength="8">
+            <button class="olho" type="button" aria-label="Mostrar senha" aria-pressed="false">◉</button>
+          </div>
+          <p class="dica">Use pelo menos 8 caracteres.</p>
+          <p class="erro" id="erro_senha_input" role="alert" hidden></p>
+        </div>
+
+        <div class="campo apos-dica">
+          <label for="confirmacao_input">Confirmar senha</label>
+          <div class="entrada com-olho">
+            <input id="confirmacao_input" name="confirmar" type="password" autocomplete="new-password" placeholder="Digite a senha novamente" required>
+            <button class="olho" type="button" aria-label="Mostrar senha" aria-pressed="false">◉</button>
+          </div>
+          <p class="erro" id="erro_confirmacao_input" role="alert" hidden></p>
+        </div>
+
+        <p class="termos">Ao criar sua conta, você concorda com os <a href="#termos">Termos de uso</a><br>e a <a href="#privacidade">Política de privacidade</a>.</p>
+
+        <button class="botao-form" type="submit">Criar minha conta →</button>
+        <p class="status-form" id="status" role="status" hidden></p>
+
+        <a class="link-troca" href="login.html">Já tem uma conta?&nbsp; Entrar</a>
+      </form>
+    </section>
+  </main>
+
+  <footer class="rodape-claro">
+    <p class="assinatura">SONIC 35&nbsp; /&nbsp; A aventura continua.</p>
+    <p class="nota">Projeto de fã, não oficial. Personagens © SEGA.</p>
+  </footer>
+
+  <script src="js/formulario.js"></script>
+  <script>
+      // quem já está logado vai direto para a comunidade
+      if (sessionStorage.ID_USUARIO) {
+        window.location = "./dashboard/personagens.html";
+      }
+  
+      function cadastrar() {
+        var nomeVar = nome_input.value.trim();
+        var emailVar = email_input.value.trim();
+        var senhaVar = senha_input.value;
+        var confirmacaoVar = confirmacao_input.value;
+  
+        // valida os campos e mostra todos os erros de uma vez
+        var erros = [
+          [nome_input, nomeVar.length < 2 ? "Conte como podemos chamar você." : ""],
+          [email_input, !emailVar ? "Digite seu e-mail." : !emailValido(emailVar) ? "Esse e-mail não parece válido." : ""],
+          [senha_input, senhaVar.length < 8 ? "Use pelo menos 8 caracteres." : ""],
+          [confirmacao_input, !confirmacaoVar ? "Digite a senha novamente." : confirmacaoVar != senhaVar ? "As senhas não são iguais." : ""]
+        ];
+        erros.forEach(function (par) {
+          mostrarErro(par[0], par[1]);
+        });
+  
+        var primeiroErro = erros.find(function (par) { return par[1]; });
+        if (primeiroErro) {
+          primeiroErro[0].focus();
+          return false;
+        }
+  
+        aguardar();
+  
+        fetch("/usuarios/cadastrar", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            nomeServer: nomeVar,
+            emailServer: emailVar,
+            senhaServer: senhaVar
+          })
+        }).then(function (resposta) {
+          console.log("resposta: ", resposta);
+  
+          if (resposta.ok) {
+            resposta.json().then(function (json) {
+              // já entra logado depois de criar a conta
+              sessionStorage.EMAIL_USUARIO = json.email;
+              sessionStorage.NOME_USUARIO = json.nome.split(" ")[0];
+              sessionStorage.ID_USUARIO = json.id;
+  
+              finalizarAguardar("Conta criada! Bem-vindo ao time.");
+              document.querySelector(".botao-form").disabled = true;
+              setTimeout(function () {
+                window.location = "./dashboard/quiz.html";
+              }, 900);
+            });
+          } else {
+            resposta.text().then(function (texto) {
+              console.error(texto);
+              finalizarAguardar();
+              mostrarErro(resposta.status == 409 ? email_input : senha_input, texto);
+            });
+          }
+        }).catch(function (erro) {
+          console.log("#ERRO: " + erro);
+          finalizarAguardar('Não consegui falar com o servidor. Abra o site por http://localhost:3333 (rode "npm start").');
+        });
+  
+        return false;
+      }
+    </script>
+</body>
+</html>
