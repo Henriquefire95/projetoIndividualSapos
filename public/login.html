@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Sonic 35 Anos</title>
+    <link rel="icon" href="./assets/icon/favicon2.ico" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="fundo_acesso">
+    <main class="acesso">
+      <section class="card_acesso">
+        <a href="index.html" class="voltar">← Voltar para a Home</a>
+        <h1>Login</h1>
+        <p>Entre na sua conta para responder a pesquisa e ver o dashboard.</p>
+        <label for="ipt_email">E-mail</label>
+        <input type="email" id="ipt_email" placeholder="seuemail@exemplo.com" />
+        <label for="ipt_senha">Senha</label>
+        <input type="password" id="ipt_senha" placeholder="Sua senha" />
+        <button class="botao botao_vermelho" onclick="entrar()">Entrar</button>
+        <div id="div_exibir"></div>
+        <p class="troca_tela">
+          Não tem conta? <a href="cadastro.html">Cadastre-se</a>
+        </p>
+      </section>
+    </main>
+
+    <script src="js/sessao.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

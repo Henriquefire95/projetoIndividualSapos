@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz | Sonic 35 Anos</title>
+<link rel="icon" href="../assets/icon/favicon2.ico">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="fundo_acesso" onload="iniciar_quiz()">
+
+<header class="cabecalho">
+<a href="../index.html" class="logo">SONIC <span class="logo_numero">35</span></a>
+<nav class="menu">
+<a href="pesquisa.html">Pesquisa</a>
+<a href="quiz.html" class="menu_ativo">Quiz</a>
+<a href="dashboard.html">Dashboard</a>
+</nav>
+<div class="menu_usuario">
+<p>Olá, <b id="b_usuario"></b></p>
+<button class="botao botao_contorno" onclick="limparSessao()">Sair</button>
+</div>
+</header>
+
+<main class="acesso">
+<section class="card_acesso card_pesquisa">
+<h1>Quiz Sonic 35 anos</h1>
+<div class="placar">
+<p id="p_numero_pergunta">Pergunta 1 de 5</p>
+<p>Acertos: <b id="b_acertos">0</b> · Erros: <b id="b_erros">0</b></p>
+</div>
+<div id="div_quiz" class="area_quiz">
+<h2 id="h2_pergunta" class="pergunta"></h2>
+<label for="select_resposta">Escolha sua resposta</label>
+<select id="select_resposta"></select>
+<button class="botao botao_vermelho" onclick="responder()">Responder</button>
+</div>
+<div id="div_exibir"></div>
+</section>
+</main>
+
+<script src="../js/sessao.js"></script>
+<script src="../js/quiz.js"></script>
+</body>
+</html>

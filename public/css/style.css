@@ -1,0 +1,501 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F2F4F8;
+    color: #002B5B;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin: 0 0 24px 0;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 40px;
+    background-color: #002B5B;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.logo_numero {
+    background-color: #FFD700;
+    color: #002B5B;
+    padding: 2px 10px;
+    border-radius: 8px;
+}
+
+.menu {
+    display: flex;
+    gap: 24px;
+}
+
+.menu a {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.menu a:hover,
+.menu a.menu_ativo {
+    color: #FFD700;
+}
+
+.menu_usuario {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.botao {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.botao:hover {
+    opacity: 0.85;
+}
+
+.botao_vermelho {
+    background-color: #E60012;
+    color: white;
+}
+
+.botao_amarelo {
+    background-color: #FFD700;
+    color: #002B5B;
+}
+
+.botao_contorno {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding: 72px 10%;
+    background-color: #0054A6;
+}
+
+.banner_texto {
+    width: 55%;
+    color: white;
+}
+
+.banner_texto h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.banner_texto p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #002B5B;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+.banner_botoes {
+    display: flex;
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.banner_imagem {
+    width: 40%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 24px;
+    border: 4px solid #FFD700;
+    background-color: #002B5B;
+}
+
+.banner_imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.secao {
+    padding: 72px 10%;
+}
+
+.secao_escura {
+    background-color: #002B5B;
+    color: white;
+}
+
+.secao_azul {
+    background-color: #0054A6;
+    color: white;
+}
+
+.secao_numero {
+    color: #E60012;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0 0 8px 0;
+}
+
+.secao_escura .secao_numero {
+    color: #FFD700;
+}
+
+.secao_azul .secao_numero {
+    color: #FFD700;
+}
+
+.historia {
+    display: flex;
+    gap: 48px;
+}
+
+.historia_texto {
+    width: 50%;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.linha_tempo {
+    width: 50%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.linha_tempo li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: white;
+    border-radius: 14px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 12px rgba(0, 43, 91, 0.08);
+}
+
+.ano {
+    background-color: #0054A6;
+    color: white;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 10px;
+}
+
+.grade_cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    width: 23%;
+    background-color: white;
+    color: #002B5B;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 43, 91, 0.1);
+}
+
+.card:hover {
+    box-shadow: 0 12px 28px rgba(0, 43, 91, 0.25);
+}
+
+.card_imagem {
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    background-color: #E3ECF7;
+    border-bottom: 4px solid #FFD700;
+}
+
+.card_imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card h3 {
+    margin: 14px 16px 4px 16px;
+}
+
+.card p {
+    margin: 0 16px 14px 16px;
+    font-size: 14px;
+}
+
+.card_tipo {
+    display: inline-block;
+    background-color: #E60012;
+    color: white;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 12px;
+}
+
+.grade_curiosidades {
+    display: flex;
+    gap: 20px;
+}
+
+.curiosidade {
+    width: 25%;
+    background-color: #002B5B;
+    border-left: 6px solid #FFD700;
+    border-radius: 14px;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.card_calculadora {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 480px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 22px;
+    padding: 32px;
+    box-shadow: 0 12px 32px rgba(0, 43, 91, 0.15);
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+input {
+    padding: 12px;
+    border: 2px solid #D3DCE8;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+select {
+    padding: 12px;
+    border: 2px solid #D3DCE8;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.card_calculadora .botao {
+    margin-top: 14px;
+}
+
+.card_resultado {
+    margin-top: 12px;
+    background-color: #FFF6C2;
+    border-radius: 14px;
+    padding: 6px 18px;
+}
+
+.resultado_total {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.msg_erro {
+    color: #E60012;
+    font-weight: bold;
+}
+
+.msg_certo {
+    color: #0A7A2F;
+    font-weight: bold;
+}
+
+.convite {
+    text-align: center;
+}
+
+.convite p {
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+.rodape {
+    background-color: #002B5B;
+    color: #C7D6EA;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+}
+
+.fundo_acesso {
+    background-color: #0054A6;
+}
+
+.acesso {
+    display: flex;
+    justify-content: center;
+    padding: 48px 20px;
+}
+
+.card_acesso {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 420px;
+    background-color: white;
+    border-radius: 24px;
+    padding: 36px 40px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card_acesso h1 {
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.card_acesso .botao {
+    margin-top: 14px;
+}
+
+.card_pesquisa {
+    width: 520px;
+}
+
+.placar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F2F4F8;
+    border-radius: 12px;
+    padding: 0 16px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.area_quiz {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.pergunta {
+    font-size: 20px;
+    text-transform: none;
+    margin: 12px 0 4px 0;
+}
+
+.voltar {
+    color: #0054A6;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.troca_tela {
+    text-align: center;
+    font-size: 14px;
+}
+
+.troca_tela a {
+    color: #0054A6;
+    font-weight: bold;
+}
+
+.fundo_dashboard {
+    background-color: #F2F4F8;
+}
+
+.dashboard {
+    padding: 20px 40px;
+}
+
+.dashboard h1 {
+    font-size: 26px;
+    margin-bottom: 16px;
+}
+
+.kpis {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.kpi {
+    flex: 1;
+    background-color: #002B5B;
+    color: white;
+    border-radius: 16px;
+    padding: 12px 18px;
+    border-bottom: 4px solid #FFD700;
+}
+
+.kpi p {
+    margin: 0;
+    font-size: 13px;
+    color: #C7D6EA;
+}
+
+.kpi_valor {
+    font-size: 30px;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.graficos {
+    display: flex;
+    gap: 16px;
+}
+
+.grafico {
+    flex: 1;
+    height: 340px;
+    background-color: white;
+    border-radius: 16px;
+    padding: 16px 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 14px rgba(0, 43, 91, 0.1);
+}
+
+.grafico h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.area_grafico {
+    position: relative;
+    height: 240px;
+}
+
+.legenda_grafico {
+    margin: 10px 0 0 0;
+    font-size: 12px;
+    color: #5A6A82;
+}

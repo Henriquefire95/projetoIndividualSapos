@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sonic 35 Anos | Página Inicial</title>
+    <link rel="icon" href="./assets/icon/favicon2.ico" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body onload="montar_menu()">
+    <header class="cabecalho">
+      <a href="index.html" class="logo"
+        >SONIC <span class="logo_numero">35</span></a
+      >
+      <nav class="menu">
+        <a href="#historia">História</a>
+        <a href="#personagens">Personagens</a>
+        <a href="#zonas">Zonas</a>
+        <a href="#curiosidades">Curiosidades</a>
+        <a href="#calculadora">Calculadora</a>
+      </nav>
+      <div id="div_menu_usuario" class="menu_usuario"></div>
+    </header>
+
+    <main>
+      <section class="banner">
+        <div class="banner_texto">
+          <p class="etiqueta">1991 — 2026</p>
+          <h1>35 anos correndo na frente</h1>
+          <p>
+            Uma homenagem ao ouriço azul mais rápido dos games. Conheça a
+            história, os personagens e as zonas mais famosas, monte sua coleção
+            na calculadora e crie sua conta para responder a pesquisa de fãs e o
+            quiz.
+          </p>
+          <div class="banner_botoes">
+            <a
+              id="a_botao_principal"
+              href="cadastro.html"
+              class="botao botao_vermelho"
+              >Criar minha conta</a
+            >
+            <a href="#calculadora" class="botao botao_amarelo"
+              >Usar a calculadora</a
+            >
+          </div>
+        </div>
+        <div class="banner_imagem">
+          <img
+            src="assets/imgs/banner.jpg"
+            alt="Imagem do banner do Sonic 35 anos"
+            onerror="this.style.display = 'none'"
+          />
+        </div>
+      </section>
+
+      <section id="historia" class="secao">
+        <p class="secao_numero">01 · HISTÓRIA</p>
+        <h2>De 1991 até hoje</h2>
+        <div class="historia">
+          <div class="historia_texto">
+            <p>
+              Sonic the Hedgehog estreou em 23 de junho de 1991, no Mega Drive,
+              criado pelo Sonic Team da SEGA. A ideia era um herói rápido, com
+              atitude, correndo por fases cheias de loops e argolas douradas.
+            </p>
+            <p>
+              Em 35 anos, a série passou por consoles, computadores, celulares,
+              desenhos e cinema, sempre com a velocidade como marca registrada.
+            </p>
+          </div>
+          <ul class="linha_tempo">
+            <li>
+              <span class="ano">1991</span> Estreia no Mega Drive com Green Hill
+              Zone
+            </li>
+            <li>
+              <span class="ano">1992</span> Sonic 2 apresenta o Tails como
+              parceiro
+            </li>
+            <li>
+              <span class="ano">1998</span> Sonic Adventure leva a série para o
+              3D
+            </li>
+            <li>
+              <span class="ano">2017</span> Sonic Mania resgata o estilo
+              clássico
+            </li>
+            <li>
+              <span class="ano">2020</span> Primeiro filme do Sonic chega aos
+              cinemas
+            </li>
+            <li><span class="ano">2026</span> 35 anos de velocidade</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="personagens" class="secao_escura">
+        <div class="secao">
+          <p class="secao_numero">02 · PERSONAGENS</p>
+          <h2>Heróis e vilões</h2>
+          <div class="grade_cards">
+            <article class="card">
+              <div class="card_imagem">
+                <img
+                  src="assets/imgs/sonic.png"
+                  alt="Sonic"
+                  onerror="this.style.display = 'none'"
+                />
+              </div>
+              <h3>Sonic</h3>
+              <p class="card_tipo">Herói</p>
+              <p>O ouriço mais rápido do mundo.</p>
+            </article>
+            <article class="card">
+              <div class="card_imagem">
+                <img
+                  src="assets/imgs/tails.png"
+                  alt="Tails"
+                  onerror="this.style.display = 'none'"
+                />
+              </div>
+              <h3>Tails</h3>
+              <p class="card_tipo">Herói</p>
+              <p>Raposa de duas caudas que voa e cria máquinas.</p>
+            </article>
+            <article class="card">
+              <div class="card_imagem">
+                <img
+                  src="assets/imgs/knuckles.png"
+                  alt="Knuckles"
+                  onerror="this.style.display = 'none'"
+                />
+              </div>
+              <h3>Knuckles</h3>
+              <p class="card_tipo">Herói</p>
+              <p>Guardião da Master Emerald.</p>
+            </article>
+            <article class="card">
+              <div class="card_imagem">
+                <img
+                  src="assets/imgs/amy.png"
+                  alt="Amy Rose"
+                  onerror="this.style.display = 'none'"
+                />
+              </div>
+              <h3>Amy Rose</h3>
+              <p class="card_tipo">Herói</p>
+              <p>Corajosa, sempre com seu martelo.</p>
+            </article>
+            <article class="card">
+              <div class="card_imagem">
+                <img
+                  src="assets/imgs/shadow.png"
+                  alt="Shadow"
+                  onerror="this.style.display = 'none'"
+                />
+              </div>
+              <h3>Shadow</h3>
+              <p class="card_tipo">Anti-herói</p>
+              <p>A forma de vida suprema.</p>
+            </article>
+            <article class="card">
+              <div class="card_imagem">
+                <img
+                  src="assets/imgs/silver.png"
+                  alt="Silver"
+                  onerror="this.style.display = 'none'"
+                />
+              </div>
+              <h3>Silver</h3>
+              <p class="card_tipo">Herói</p>
+              <p>Veio do futuro e usa telecinese.</p>
+            </article>
+            <article class="card">
+              <div class="card_imagem">
+                <img
+                  src="assets/imgs/eggman.png"
+                  alt="Dr. Eggman"
+                  onerror="this.style.display = 'none'"
+                />
+              </div>
+              <h3>Dr. Eggman</h3>
+              <p class="card_tipo">Vilão</p>
+              <p>Cientista que quer dominar o mundo.</p>
+            </article>
+            <article class="card">
+              <div class="card_imagem">
+                <img
+                  src="assets/imgs/metal_sonic.png"
+                  alt="Metal Sonic"
+                  onerror="this.style.display = 'none'"
+                />
+              </div>
+              <h3>Metal Sonic</h3>
+              <p class="card_tipo">Vilão</p>
+              <p>Robô rival criado pelo Eggman.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="zonas" class="secao">
+        <p class="secao_numero">03 · ZONAS</p>
+        <h2>Fases inesquecíveis</h2>
+        <div class="grade_cards">
+          <article class="card">
+            <div class="card_imagem">
+              <img
+                src="assets/imgs/green_hill.jpg"
+                alt="Green Hill Zone"
+                onerror="this.style.display = 'none'"
+              />
+            </div>
+            <h3>Green Hill Zone</h3>
+            <p>Sonic the Hedgehog (1991)</p>
+          </article>
+          <article class="card">
+            <div class="card_imagem">
+              <img
+                src="assets/imgs/chemical_plant.jpg"
+                alt="Chemical Plant Zone"
+                onerror="this.style.display = 'none'"
+              />
+            </div>
+            <h3>Chemical Plant Zone</h3>
+            <p>Sonic the Hedgehog 2 (1992)</p>
+          </article>
+          <article class="card">
+            <div class="card_imagem">
+              <img
+                src="assets/imgs/casino_night.jpg"
+                alt="Casino Night Zone"
+                onerror="this.style.display = 'none'"
+              />
+            </div>
+            <h3>Casino Night Zone</h3>
+            <p>Sonic the Hedgehog 2 (1992)</p>
+          </article>
+          <article class="card">
+            <div class="card_imagem">
+              <img
+                src="assets/imgs/angel_island.jpg"
+                alt="Angel Island Zone"
+                onerror="this.style.display = 'none'"
+              />
+            </div>
+            <h3>Angel Island Zone</h3>
+            <p>Sonic 3 &amp; Knuckles (1994)</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="curiosidades" class="secao_azul">
+        <div class="secao">
+          <p class="secao_numero">04 · CURIOSIDADES</p>
+          <h2>Você sabia?</h2>
+          <div class="grade_curiosidades">
+            <div class="curiosidade">
+              O Sonic foi criado para ser o mascote da SEGA e competir com
+              outros personagens famosos da época.
+            </div>
+            <div class="curiosidade">
+              As argolas douradas protegem o Sonic: se ele for atingido com pelo
+              menos uma argola, não perde uma vida.
+            </div>
+            <div class="curiosidade">
+              O Tails tem esse nome porque possui duas caudas, que ele gira como
+              uma hélice para voar.
+            </div>
+            <div class="curiosidade">
+              As Esmeraldas do Caos transformam o Sonic no Super Sonic quando
+              ele junta as sete.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="calculadora" class="secao">
+        <p class="secao_numero">05 · CALCULADORA</p>
+        <h2>Monte sua coleção de 35 anos</h2>
+        <div class="card_calculadora">
+          <label for="select_item">Item da coleção</label>
+          <select id="select_item">
+            <option value="0">Pelúcia Sonic 35 anos — R$ 120</option>
+            <option value="1">Camiseta comemorativa — R$ 80</option>
+            <option value="2">Box colecionador — R$ 350</option>
+            <option value="3">Jogo edição especial — R$ 250</option>
+          </select>
+          <label for="ipt_quantidade">Quantidade</label>
+          <input type="number" id="ipt_quantidade" placeholder="Ex.: 2" />
+          <label for="select_pagamento">Forma de pagamento</label>
+          <select id="select_pagamento">
+            <option value="pix">Pix — R$ 10 de desconto por item</option>
+            <option value="boleto">Boleto — R$ 5 de desconto por item</option>
+            <option value="cartao">Cartão — sem desconto</option>
+          </select>
+          <button class="botao botao_vermelho" onclick="calcular()">
+            Calcular
+          </button>
+          <div id="div_exibir"></div>
+        </div>
+      </section>
+
+      <section class="secao_escura">
+        <div class="secao convite">
+          <h2>Faça parte da pesquisa e do quiz</h2>
+          <p>
+            Crie sua conta, responda a pesquisa de fãs, teste seus conhecimentos
+            no quiz e veja tudo no dashboard.
+          </p>
+          <a
+            id="a_botao_convite"
+            href="cadastro.html"
+            class="botao botao_amarelo"
+            >Quero participar</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <p>
+        Sonic 35 Anos · Projeto individual de fã, sem fins lucrativos. Sonic the
+        Hedgehog é marca registrada da SEGA.
+      </p>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/calculadora.js"></script>
+  </body>
+</html>

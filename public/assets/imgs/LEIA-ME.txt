@@ -1,0 +1,20 @@
+IMAGENS DA HOME (salve nesta pasta public/assets/imgs/ com estes nomes exatos):
+
+Banner principal:
+  banner.jpg
+
+Personagens:
+  sonic.png
+  tails.png
+  knuckles.png
+  amy.png
+  shadow.png
+  silver.png
+  eggman.png
+  metal_sonic.png
+
+Zonas:
+  green_hill.jpg
+  chemical_plant.jpg
+  casino_night.jpg
+  angel_island.jpg

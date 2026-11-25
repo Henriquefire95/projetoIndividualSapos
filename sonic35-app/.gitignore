@@ -1,6 +1,0 @@
-# nunca envie senhas do banco para o GitHub
-node_modules
-package-lock.json
-.env
-.env.dev
-.github

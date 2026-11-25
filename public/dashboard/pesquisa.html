@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pesquisa de fãs | Sonic 35 Anos</title>
+<link rel="icon" href="../assets/icon/favicon2.ico">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="fundo_acesso" onload="validarSessao()">
+
+<header class="cabecalho">
+<a href="../index.html" class="logo">SONIC <span class="logo_numero">35</span></a>
+<nav class="menu">
+<a href="pesquisa.html" class="menu_ativo">Pesquisa</a>
+<a href="quiz.html">Quiz</a>
+<a href="dashboard.html">Dashboard</a>
+</nav>
+<div class="menu_usuario">
+<p>Olá, <b id="b_usuario"></b></p>
+<button class="botao botao_contorno" onclick="limparSessao()">Sair</button>
+</div>
+</header>
+
+<main class="acesso">
+<section class="card_acesso card_pesquisa">
+<h1>Pesquisa de fãs</h1>
+<p>Responda as perguntas abaixo. Suas respostas vão para o dashboard.</p>
+
+<label for="select_personagem">Qual é o seu personagem favorito?</label>
+<select id="select_personagem">
+<option value="">Selecione</option>
+<option value="1">Sonic</option>
+<option value="2">Tails</option>
+<option value="3">Knuckles</option>
+<option value="4">Amy Rose</option>
+<option value="5">Shadow</option>
+<option value="6">Silver</option>
+<option value="7">Dr. Eggman</option>
+<option value="8">Metal Sonic</option>
+</select>
+
+<label for="select_jogo">Qual é o seu jogo favorito?</label>
+<select id="select_jogo">
+<option value="">Selecione</option>
+<option value="Sonic the Hedgehog">Sonic the Hedgehog (1991)</option>
+<option value="Sonic the Hedgehog 2">Sonic the Hedgehog 2 (1992)</option>
+<option value="Sonic 3 e Knuckles">Sonic 3 &amp; Knuckles (1994)</option>
+<option value="Sonic Adventure">Sonic Adventure (1998)</option>
+<option value="Sonic Mania">Sonic Mania (2017)</option>
+<option value="Sonic Frontiers">Sonic Frontiers (2022)</option>
+</select>
+
+<label for="select_zona">Qual é a sua zona favorita?</label>
+<select id="select_zona">
+<option value="">Selecione</option>
+<option value="Green Hill">Green Hill Zone</option>
+<option value="Chemical Plant">Chemical Plant Zone</option>
+<option value="Casino Night">Casino Night Zone</option>
+<option value="Angel Island">Angel Island Zone</option>
+</select>
+
+<label for="select_plataforma">Onde você mais joga Sonic?</label>
+<select id="select_plataforma">
+<option value="">Selecione</option>
+<option value="Console">Console</option>
+<option value="Computador">Computador</option>
+<option value="Celular">Celular</option>
+</select>
+
+<label for="select_tempo">Há quanto tempo você é fã?</label>
+<select id="select_tempo">
+<option value="">Selecione</option>
+<option value="Menos de 5 anos">Menos de 5 anos</option>
+<option value="De 5 a 15 anos">De 5 a 15 anos</option>
+<option value="Mais de 15 anos">Mais de 15 anos</option>
+</select>
+
+<button class="botao botao_vermelho" onclick="enviar_pesquisa()">Enviar respostas</button>
+<div id="div_exibir"></div>
+</section>
+</main>
+
+<script src="../js/sessao.js"></script>
+<script src="../js/pesquisa.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | Sonic 35 Anos</title>
+<link rel="icon" href="../assets/icon/favicon2.ico">
+<link rel="stylesheet" href="../css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="fundo_dashboard" onload="carregar_dashboard()">
+
+<header class="cabecalho">
+<a href="../index.html" class="logo">SONIC <span class="logo_numero">35</span></a>
+<nav class="menu">
+<a href="pesquisa.html">Pesquisa</a>
+<a href="quiz.html">Quiz</a>
+<a href="dashboard.html" class="menu_ativo">Dashboard</a>
+</nav>
+<div class="menu_usuario">
+<p>Olá, <b id="b_usuario"></b></p>
+<button class="botao botao_contorno" onclick="limparSessao()">Sair</button>
+</div>
+</header>
+
+<main class="dashboard">
+<h1>Dashboard da pesquisa de fãs</h1>
+
+<section class="kpis">
+<div class="kpi">
+<p>Total de respostas</p>
+<div id="div_total_respostas" class="kpi_valor">0</div>
+</div>
+<div class="kpi">
+<p>Fãs cadastrados</p>
+<div id="div_total_usuarios" class="kpi_valor">0</div>
+</div>
+<div class="kpi">
+<p>Personagem mais escolhido</p>
+<div id="div_personagem_top" class="kpi_valor">-</div>
+</div>
+<div class="kpi">
+<p>Suas respostas</p>
+<div id="div_suas_respostas" class="kpi_valor">0</div>
+</div>
+<div class="kpi">
+<p>Seu melhor resultado no quiz</p>
+<div id="div_melhor_quiz" class="kpi_valor">-</div>
+</div>
+</section>
+
+<section class="graficos">
+<div class="grafico">
+<h2>Personagens favoritos</h2>
+<div class="area_grafico">
+<canvas id="canvas_personagens"></canvas>
+</div>
+<p class="legenda_grafico">Gráfico de barras · quantidade de fãs</p>
+</div>
+<div class="grafico">
+<h2>Onde os fãs jogam</h2>
+<div class="area_grafico">
+<canvas id="canvas_plataformas"></canvas>
+</div>
+<p class="legenda_grafico">Gráfico de pizza · quantidade de fãs</p>
+</div>
+<div class="grafico">
+<h2>Zonas favoritas</h2>
+<div class="area_grafico">
+<canvas id="canvas_zonas"></canvas>
+</div>
+<p class="legenda_grafico">Gráfico de colunas · quantidade de fãs</p>
+</div>
+<div class="grafico">
+<h2>Seus acertos no quiz</h2>
+<div class="area_grafico">
+<canvas id="canvas_quiz"></canvas>
+</div>
+<p class="legenda_grafico">Gráfico de linha · acertos em cada tentativa</p>
+</div>
+</section>
+
+<div id="div_exibir"></div>
+</main>
+
+<script src="../js/sessao.js"></script>
+<script src="../js/dashboard.js"></script>
+</body>
+</html>

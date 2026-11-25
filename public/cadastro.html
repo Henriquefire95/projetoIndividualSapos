@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro | Sonic 35 Anos</title>
+    <link rel="icon" href="./assets/icon/favicon2.ico" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="fundo_acesso">
+    <main class="acesso">
+      <section class="card_acesso">
+        <a href="index.html" class="voltar">← Voltar para a Home</a>
+        <h1>Cadastro</h1>
+        <p>
+          Crie sua conta para responder a pesquisa de fãs e ver o dashboard.
+        </p>
+        <label for="ipt_nome">Nome</label>
+        <input type="text" id="ipt_nome" placeholder="Seu nome" />
+        <label for="ipt_email">E-mail</label>
+        <input type="email" id="ipt_email" placeholder="seuemail@exemplo.com" />
+        <label for="ipt_senha">Senha</label>
+        <input
+          type="password"
+          id="ipt_senha"
+          placeholder="Mínimo de 6 caracteres"
+        />
+        <label for="ipt_confirmar_senha">Confirmar senha</label>
+        <input
+          type="password"
+          id="ipt_confirmar_senha"
+          placeholder="Repita a senha"
+        />
+        <button class="botao botao_vermelho" onclick="cadastrar()">
+          Cadastrar
+        </button>
+        <div id="div_exibir"></div>
+        <p class="troca_tela">
+          Já tem conta? <a href="login.html">Fazer login</a>
+        </p>
+      </section>
+    </main>
+
+    <script src="js/sessao.js"></script>
+    <script src="js/cadastro.js"></script>
+  </body>
+</html>
